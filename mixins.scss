@@ -1,0 +1,56 @@
+@mixin img($max-height) {
+    width: 100%;
+    height: auto;
+    max-height: $max-height;
+    object-fit: cover;
+}
+
+@mixin cards {
+    margin: 1em 0em;
+
+    .cards-title {
+        text-align: center;
+        margin-top: 1em;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        justify-items: center;
+        align-items: center;
+        gap: 1.5em;
+    }
+
+}
+
+@mixin card($height, $width) {
+    height: $height;
+    width: $width;
+    border-radius: 1em;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    i {
+        font-size: 3em;
+        color: $secondary-color;
+        margin-bottom: 0.2em;
+    }
+
+    .card-title {
+        font-size: 1em;
+        text-transform: uppercase;
+        margin-bottom: 0.5em;
+        text-align: center;
+    }
+
+    .card-text {
+        font-size: 0.9em;
+        text-align: center;
+        overflow-y: auto;
+    }
+}

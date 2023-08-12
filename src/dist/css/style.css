@@ -602,6 +602,7 @@ nav .navbar-menu .navbar-menu-item:hover:after {
   align-items: center;
   justify-content: center;
   position: relative;
+  padding: 0;
 }
 .prices-section .custom-section .container .custom-right .card i {
   font-size: 3em;
@@ -626,6 +627,31 @@ nav .navbar-menu .navbar-menu-item:hover:after {
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
+  padding: 0.5em 1em;
+}
+.prices-section .custom-section .container .custom-right .card .service-titles div {
+  width: 33.33%;
+}
+.prices-section .custom-section .container .custom-right .card .service-titles div:nth-of-type(1) {
+  display: flex;
+}
+.prices-section .custom-section .container .custom-right .card .service-titles div:nth-of-type(2) {
+  display: flex;
+  justify-content: center;
+}
+.prices-section .custom-section .container .custom-right .card .service-titles div:nth-of-type(3) {
+  display: flex;
+  justify-content: flex-end;
+}
+.prices-section .custom-section .container .custom-right .card .service-titles .add-btn {
+  background-color: #fe5a1d;
+  color: #f8f8ff;
+  padding: 0.5em 1em;
+  border: none;
+  cursor: pointer;
+}
+.prices-section .custom-section .container .custom-right .card .card-title {
+  margin: 0;
 }
 .prices-section .custom-section .container .custom-right .selected-services {
   height: 100%;
@@ -635,6 +661,7 @@ nav .navbar-menu .navbar-menu-item:hover:after {
   align-items: flex-start;
   justify-content: flex-start;
   margin-bottom: 0.5em;
+  padding: 0em 1em;
 }
 .prices-section .custom-section .container .custom-right .selected-services .selected-services-title {
   padding: 0em 0.1em;
@@ -645,6 +672,10 @@ nav .navbar-menu .navbar-menu-item:hover:after {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
+  padding: 0em 1em;
+}
+.prices-section .custom-section .container .custom-right .card-btn {
+  margin-bottom: 0.5em;
 }
 
 .contact {
@@ -775,6 +806,15 @@ nav .navbar-menu .navbar-menu-item:hover:after {
   }
   .recommendation .recommendation-list-item:before {
     top: 5px;
+  }
+  .prices-section .custom-section .container {
+    padding: 1em 2em;
+  }
+  .prices-section .custom-section .container .custom-left .custom-title {
+    font-size: 1.4em;
+  }
+  .prices-section .custom-section .container .custom-right {
+    padding: 0em;
   }
   .shared-layout footer .container {
     flex-direction: row;

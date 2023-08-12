@@ -628,6 +628,7 @@ nav {
     
                 .card {
                     @include card(100%, 100%);
+                    padding: 0;
 
                     .service-titles {
                         height: 100%;
@@ -636,6 +637,43 @@ nav {
                         align-items: center;
                         justify-content: space-between;
                         cursor: pointer;
+                        padding: 0.5em 1em;
+                        
+                        // &:hover {
+                        //     background-color: $secondary-color;
+                        //     color: $primary-color;
+                        // }
+
+                        div {
+                            width: 33.33%;
+                        }
+
+                        div:nth-of-type(1){
+                            display: flex;
+                        }
+
+                        div:nth-of-type(2){
+                            display: flex;
+                            justify-content: center;
+                        }
+
+                        div:nth-of-type(3){
+                            display: flex;
+                            justify-content: flex-end;
+                        }
+
+                        .add-btn {
+                            background-color: $secondary-color;
+                            color: $primary-color;
+                            padding: 0.5em 1em;
+                            border: none;
+                            cursor: pointer;
+                        }
+                        
+                    }
+
+                    .card-title {
+                        margin: 0;
                     }
 
                 }
@@ -648,6 +686,7 @@ nav {
                     align-items: flex-start;
                     justify-content: flex-start;
                     margin-bottom: 0.5em;
+                    padding: 0em 1em;
 
                     .selected-services-title {
                         padding: 0em 0.1em;
@@ -661,6 +700,11 @@ nav {
                     display: flex;
                     align-items: flex-start;
                     justify-content: flex-start;
+                    padding: 0em 1em;
+                }
+
+                .card-btn {
+                    margin-bottom: 0.5em;
                 }
 
             }
@@ -854,6 +898,32 @@ nav {
             top: 5px;
         }
         
+    }
+
+    .prices-section {
+
+        .custom-section {
+
+            .container {
+
+                padding: 1em 2em;
+
+                .custom-left {
+
+                    .custom-title {
+                        font-size: 1.4em;
+                    }
+
+                }
+
+                .custom-right {
+                    padding: 0em;
+                }
+
+            }
+
+        }
+
     }
 
     .shared-layout {

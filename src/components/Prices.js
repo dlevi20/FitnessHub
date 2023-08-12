@@ -6,6 +6,10 @@ export default function Prices(){
 
     const [customBundle, setCustomBundle] = useState([])
 
+    useEffect(() => {
+        document.title = 'Áraink - Fitness Hub'
+    }, [])
+
     function bundleFunction(service){
 
         const checkDuplicate = customBundle.find((element) => element.id === service.id)
@@ -18,9 +22,17 @@ export default function Prices(){
     }
 
     const servicesCard = services.map(function(service){
-        return <div key={service.id} className="service-titles">
-            <h1 onClick={() => bundleFunction(service)} className="card-title">{service.title}</h1>
-            <h1 className="card-title">{service.price}</h1>
+        let inCart = customBundle.some((element) => element.id === service.id)
+        return <div key={service.id} className="service-titles" onClick={() => bundleFunction(service)}>
+            <div>
+                <h1 className="card-title">{service.title}</h1>
+            </div>
+            <div>
+                <h1 className="card-title">{service.price} Ft</h1>
+            </div>
+            <div>
+                <button className="add-btn">{inCart === false ? "Hozzáad" : "Eltávolít"}</button>
+            </div>
         </div> 
     })
 
@@ -52,7 +64,7 @@ export default function Prices(){
                                     <li className="card-list-item">Falmászás</li>
                                     <li className="card-list-item">*</li>
                                 </ul>
-                                <Link to="contact" className="card-btn">Vásárlás</Link>
+                                <Link to="../contact" className="card-btn">Vásárlás</Link>
                             </div>
                         </div>
                         <div className="card">
@@ -69,7 +81,7 @@ export default function Prices(){
                                     <li className="card-list-item">Fallabda</li>
                                     <li className="card-list-item">Futás</li>
                                 </ul>
-                                <Link to="contact" className="card-btn">Vásárlás</Link>
+                                <Link to="../contact" className="card-btn">Vásárlás</Link>
                             </div>
                         </div>
                         <div className="card">
@@ -86,7 +98,7 @@ export default function Prices(){
                                     <li className="card-list-item">Yoga</li>
                                     <li className="card-list-item">Wellness</li>
                                 </ul>
-                                <Link to="contact" className="card-btn">Vásárlás</Link>
+                                <Link to="../contact" className="card-btn">Vásárlás</Link>
                             </div>
                         </div>
                     </div>
@@ -104,8 +116,9 @@ export default function Prices(){
                                     {customBundleServices}
                                 </div>
                                 <div className="total">
-                                    <h4>Összeg: {total}</h4>
+                                    <h4>Összeg: {total} Ft</h4>
                                 </div>
+                                <Link to="../contact" className="card-btn">Vásárlás</Link>
                             </div>
                         </div>                                        
                         </div>
